@@ -1,23 +1,31 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
 }
+.img-portada {
+    max-width: 60%;
+}
+.div-img {
+    text-align: center;
 
+}
 .container {
-    max-width: 600px;
+    max-width: 800px;
     margin: 50px auto;
     padding: 20px;
     background-color: #fff;
-    border-radius: 5px;
+    border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
     text-align: center;
 }
-
+h2 {
+    text-align:center;
+}
 form {
     margin-bottom: 20px;
 }
@@ -25,10 +33,31 @@ form {
 label {
     font-weight: bold;
 }
-
+.li-turno {
+    text-decoration: solid;
+    color: #fff;
+    font-size:xx-large;
+    background-color: #1806bb;
+    padding: 10px;
+}
+.li-turno-contenido {
+    text-decoration: solid;
+    font-size:xx-large;
+    padding: 10px;
+}
+.select-identity {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
 input[type="text"],
 textarea {
-    width: 100%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    width: 95%;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
@@ -46,6 +75,18 @@ button {
 
 button:hover {
     background-color: #0056b3;
+}
+.delete-btn {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    padding: 5px 10px;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.delete-btn:hover {
+    background-color: #890404;
 }
 
 ul {

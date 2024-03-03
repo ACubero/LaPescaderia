@@ -3,21 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario</title>
+    <title>¡La pescadería del Cubero!</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
 <body>
     <div class="container">
-        <h1>Formulario</h1>
+        <div class="div-img">
+        <img class="img-portada" src="https://alexcuar.eu/lapescaderia/img/pescaderia-portada.jpg">
+        </div>    
+
+        <h1><i>Cubero's</i> fish shop</i></h1>
+        <h2>Coge tu turno para hacer tu consulta</h2>
+        <div id="turnosHoy"></div>
+
         <form id="form">
             <label for="name">Nombre:</label><br>
-            <input type="text" id="name" name="name"><br>
+            <select class="select-identity" id="name" name="name">
+                <option value="">Identificate...</option>
+                <option value="QMB">QMB - Joaquín Moreira</option>
+                <option value="RLA">RLA - Rafael Laguna</option>
+                <option value="MMM">MMM - Montse Martín</option>
+                <option value="OSS">OSS - Oriol Serradell</option>
+                <option value="MF">MF - Marc Fortuny</option>
+                <option value="XBA">XBA - Xavi Bosch</option>
+                <option value="SGB">SGB - Santi Garcés</option>
+                <option value="RM">RM - Raúl Moreno</option>
+            </select><br>
             <label for="description">Descripción:</label><br>
-            <textarea id="description" name="description"></textarea><br><br>
-            <button type="submit">Enviar</button>
+            <input type="text" id="description" name="description">
+            <button type="submit">Coger TURNO</button>
+            
         </form>
-        <ul id="info-list"></ul>
+        <ul id="lista-turno"></ul>
     </div>
 </body>
 </html>

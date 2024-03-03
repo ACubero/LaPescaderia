@@ -1,6 +1,7 @@
+var turnos = 0;
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('form');
-    const infoList = document.getElementById('info-list');
+    const listaTurno = document.getElementById('lista-turno');
 
     form.addEventListener('submit', function(event) {
         event.preventDefault();
@@ -9,12 +10,20 @@ document.addEventListener('DOMContentLoaded', function() {
         const descriptionInput = document.getElementById('description');
 
         const name = nameInput.value.trim();
-        const description = descriptionInput.value.trim();
+        let description = descriptionInput.value.trim();
 
-        if (name !== '' && description !== '') {
+        //if (name !== '' && description !== '') {
+        if (name !== '' ) {
+            if (description !== '') {
+                description = '"'+description+'"';
+            }
+            turnos++;
+            turnosHoy.innerHTML = `Último turno entregado: ${turnos}`;
             const listItem = document.createElement('li');
-            listItem.innerHTML = `<span><strong>${name}:</strong> ${description}</span> <button class="delete-btn">Eliminar</button>`;
-            infoList.appendChild(listItem);
+            htmlMontaLista = `<button class="delete-btn">X</button> <span class="li-turno">&nbsp;${turnos}&nbsp;</span> `;
+            htmlMontaLista += `<span class="li-turno-contenido"><strong>${name} </strong> ${description}</span>`;
+            listItem.innerHTML = htmlMontaLista;
+            listaTurno.appendChild(listItem);
 
             // Limpiar los campos del formulario después de enviar
             nameInput.value = '';
@@ -25,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Agregar un listener al contenedor de la lista
-    infoList.addEventListener('click', function(event) {
+    listaTurno.addEventListener('click', function(event) {
         if (event.target.classList.contains('delete-btn')) {
             // Eliminar el elemento padre (el <li>) del botón presionado
             event.target.parentNode.remove();
